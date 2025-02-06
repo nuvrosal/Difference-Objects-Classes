@@ -1,2 +1,43 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+// Car.java
+public class Car {
+    // Properties of the Car class
+    private final String color;
+    private final String model;
+    private int speed;
+
+    // Constructor to initialize the Car object
+    public Car(String color, String model, int speed) {
+        this.color = color;
+        this.model = model;
+        this.speed = speed;
+    }
+
+    // Method to simulate driving the car
+    public void drive() {
+        System.out.println("The " + color + " " + model + " is driving at " + speed + " mph.");
+    }
+
+    // Method to simulate braking the car
+    public void brake() {
+        System.out.println("The " + color + " " + model + " is braking.");
+    }
+
+    // Method to simulate accelerating the car
+    public void accelerate(int increase) {
+        speed += increase;
+        System.out.println("The " + color + " " + model + " is now going at " + speed + " mph.");
+    }
+}
+
+// Main.java
+public class Main {
+    public static void main(String[] args) {
+        // Creating an object of the Car class
+        Car myCar = new Car("red", "Toyota", 0);
+
+        // Using the methods of the Car object
+        myCar.drive();
+        myCar.accelerate(75);
+        myCar.brake();
+    }
+}
